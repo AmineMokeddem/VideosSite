@@ -1,0 +1,160 @@
+/* Start General */
+:root{
+    --main-color:rgba(88, 88, 202, 0.863);
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Cairo',sans-serif;
+}
+body{
+    font-family:'Cairo',sans-serif;
+    background:black;
+    color:white;
+}
+/* End General */
+/* Start videos-app */
+.videos-app{
+    height:100%;
+    max-height:650px;
+    width:100%;
+    max-width:414px;
+    overflow: scroll;
+    border-radius:10px;
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    scroll-snap-type:y mandatory;
+}
+.videos-app::-webkit-scrollbar{
+    display:none;
+}
+.videos-app .video{
+    width:100%;
+    height:100%;
+    position:relative;
+    scroll-snap-align:start;
+}
+.videos-app .video video{
+    object-fit:cover;
+    width:100%;
+    height:100%;
+}
+.videos-app .video footer{
+    position:absolute;
+    bottom:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    height:120px;
+}
+.videos-app .video footer .footer-left{
+    flex:0.9;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding-left:20px;
+}
+.videos-app .video footer .footer-left .btn-marquee{
+    display:flex;
+    align-items:center;
+}
+.upimg{
+    cursor:pointer;
+}
+.videos-app .video footer .footer-right{
+    flex:0.1;
+}
+.videos-app .video footer .footer-right img{
+    animation:rotate infinite 5s linear;
+}
+.videos-app .video footer img{
+    width:40px;
+}
+/* End videos app */
+/* Start upload video */
+.container{
+    background:var(--main-color);
+    width:414px;
+    margin:auto;
+    margin-top:50px;
+    height:650px;
+    padding:10px;
+    border-radius: 10px;
+}
+.upload-content{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+.container img{
+    width:80%;
+}
+.upload-content center{
+}
+.upload-content .upload-infos{
+    flex:0.8;
+}
+.upload-content .upload-infos form{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+input[type=file]{
+    
+}
+input[type=text]{
+    width:100%;
+    padding:10px;
+    border:none;
+    text-align:center;
+}
+input[type=submit]{
+    padding:10px 15px;
+    border:none;
+    background:#333;
+    color:white;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+input[type=submit]:hover{
+    background:#555;
+}
+.upload-content a{
+    text-decoration: none;
+    color:White;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* End upload video */
+/* Start keyframes for animation */
+
+@keyframes rotate{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* End keyframes */
+
+.wrong-text{
+    color:orange;
+    position:relative;
+    bottom:70px;
+}
+.succeed{
+    color:rgb(7, 189, 7);
+    position:relative;
+    bottom:70px;
+}
